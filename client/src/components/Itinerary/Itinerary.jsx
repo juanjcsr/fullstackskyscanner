@@ -19,13 +19,13 @@ class Itinerary extends PureComponent{
 
     }
 
-    // componentDidMount(){
-    //     console.log("mounted");
-    //     this.getItineraries().then( d => {
-    //         console.log("DATAAA", d);
-    //         this.setState({itineraries: d.itineraries, currency: d.currencies})
-    //     })
-    // }
+    componentDidMount(){
+        console.log("mounted");
+        // this.getItineraries().then( d => {
+        //     console.log("DATAAA", d);
+        //     this.setState({itineraries: d.itineraries, currency: d.currencies})
+        // })
+    }
 
     createCards(itineraries, currency) {
         let cards = [];
