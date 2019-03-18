@@ -36,7 +36,7 @@ app.get('/api/search', async (req, res) => {
       Adults:1,
       Children:0,
       Infants:0,
-      pageIndex:0,
+      pageIndex: req.query.page,
       pageSize: 10
     };
     const results = await livePricing.search({
@@ -55,6 +55,7 @@ app.get('/api/search', async (req, res) => {
     let places = _.groupBy(results.Places, 'Id');
     let segments = _.groupBy(results.Segments, 'Id')
     let legs = _.groupBy(results.Legs, 'Id');
+    let stops = _.groupBy(results.Stops, 'Id')
     
     let itineraries = {
       itineraries: [],
@@ -62,9 +63,11 @@ app.get('/api/search', async (req, res) => {
       places,
       segments,
       legs,
-      carriers
+      carriers,
+      stops,
+      currencies: results.Currencies[0]
     };
-    itineraries.Itineraries = []
+    // itineraries.Itineraries = results.Itineraries;
      _.map(results.Itineraries, (s) => {
       outboundLeg = legs[s.OutboundLegId][0]
       inboundLeg = legs[s.InboundLegId][0]
@@ -72,6 +75,7 @@ app.get('/api/search', async (req, res) => {
       inboundSegments = [];
       console.log(outboundLeg.Id)
       outboundLeg.SegmentIds.map( id => {
+        segments[id][0]
         outboundSegments.push(segments[id][0]);
       })
 
@@ -82,20 +86,24 @@ app.get('/api/search', async (req, res) => {
 
       outboundSegments.map( seg => {
         seg.OriginStationPlace = places[seg.OriginStation];
-        seg.DestinationStation = places[seg.DestinationStation];
+        seg.DestinationStationPlace = places[seg.DestinationStation];
         seg.CarrierName = carriers[seg.Carrier];
         seg.OperatingCarrier = carriers[seg.OperatingCarrier];
       })
 
       inboundSegments.map( seg => {
         seg.OriginStationPlace = places[seg.OriginStation];
-        seg.DestinationStation = places[seg.DestinationStation];
+        seg.DestinationStationPlace = places[seg.DestinationStation];
         seg.CarrierName = carriers[seg.Carrier];
         seg.OperatingCarrier = carriers[seg.OperatingCarrier];
       })
 
       outboundLeg.SegmentsDetail = outboundSegments;
+      outboundLeg.OriginStationPlace = places[outboundLeg.OriginStation];
+      outboundLeg.DestinationStationPlace = places[outboundLeg.DestinationStation]
       inboundLeg.SegmentsDetail = inboundSegments;
+      inboundLeg.OriginStationPlace = places[inboundLeg.OriginStation];
+      inboundLeg.DestinationStationPlace = places[inboundLeg.DestinationStation]
 
       s.OutboundLeg = outboundLeg
       s.InboundLeg = inboundLeg

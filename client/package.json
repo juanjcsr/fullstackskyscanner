@@ -36,5 +36,14 @@
     "not dead",
     "not ie <= 10",
     "not op_mini all"
-  ]
+  ],
+  "dependencies": {
+    "bpk-component-accordion": "^1.2.70",
+    "bpk-component-button": "^2.1.48",
+    "bpk-component-card": "^1.1.61",
+    "bpk-component-grid": "^1.1.117",
+    "bpk-component-icon": "^3.27.1",
+    "bpk-component-modal": "^1.8.40",
+    "bpk-component-pagination": "^1.0.80"
+  }
 }

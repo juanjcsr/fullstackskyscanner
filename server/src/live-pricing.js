@@ -25,21 +25,21 @@ const formatParams = params => querystring.stringify({
 const createSession = async (params) => {
   console.log('Creating a session..');
   try {
-    // const response = await fetch(PRICING_URL, {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/x-www-form-urlencoded',
-    //   },
-    //   body: formatParams(params),
-    // });
-    // if (response.status !== STATUS_CODES.CREATED) {
-    //   const json = await response.json();
-    //   throw new Error(JSON.stringify(json));
-    // }
+    const response = await fetch(PRICING_URL, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: formatParams(params),
+    });
+    if (response.status !== STATUS_CODES.CREATED) {
+      const json = await response.json();
+      throw new Error(JSON.stringify(json));
+    }
     console.log('Session created.');
     // Location header contains URL to poll for results.
-    // return response.headers.get('location');
-    return jsonresponse
+    return response.headers.get('location');
+    // return jsonresponse
   } catch (err) {
     throw err;
   }
@@ -53,28 +53,28 @@ const throttle = () => new Promise(resolve => setTimeout(resolve, POLL_DELAY));
 const poll = async (location) => {
   await throttle();
   console.log('Polling results..');
-  // try {
-  //   const response = await fetch(`${location}?apikey=${config.apiKey}`);
-  //   if (response.status === STATUS_CODES.NOT_MODIFIED) {
-  //     return cache;
-  //   }
-  //   const body = await response.json();
-  //   cache = body;
-  //   return body;
-  // } catch (err) {
-  //   throw err;
-  // }
-  return jsonresponse
+  try {
+    const response = await fetch(`${location}?apikey=${config.apiKey}`);
+    if (response.status === STATUS_CODES.NOT_MODIFIED) {
+      return cache;
+    }
+    const body = await response.json();
+    cache = body;
+    return body;
+  } catch (err) {
+    throw err;
+  }
+  // return jsonresponse
 };
 
 const getResults = async (location) => {
   try {
-    // const response = await poll(location);
-    // if (response.Status && response.Status === 'UpdatesComplete') {
-    //   return response;
-    // }
-    // return await getResults(location);
-    return jsonresponse
+    const response = await poll(location);
+    if (response.Status && response.Status === 'UpdatesComplete') {
+      return response;
+    }
+    return await getResults(location);
+    // return jsonresponse
   } catch (err) {
     throw err;
   }
@@ -82,8 +82,9 @@ const getResults = async (location) => {
 
 const search = async (params) => {
   try {
-    // const locationToPoll = await createSession(params);
-    return await getResults( null);
+    const locationToPoll = await createSession(params);
+    return await getResults(locationToPoll);
+    // return await getResults( null);
   } catch (err) {
     throw err;
   }
