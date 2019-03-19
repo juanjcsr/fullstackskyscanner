@@ -50,12 +50,12 @@ let cache = {};
 // Used to stop the API being hit too often.
 const throttle = () => new Promise(resolve => setTimeout(resolve, POLL_DELAY));
 
-const poll = async (location, pageIndex=-1) => {
+const poll = async (location, pageIndex = -1) => {
   await throttle();
   // console.log('Polling results..', `${location}?apikey=${config.apiKey}&pageIndex=${pageIndex}`);
   try {
-    const url = `${location}?apikey=${config.apiKey}`
-    const urlPage = pageIndex == -1 ? url : `${url}&pageIndex=${pageIndex}`
+    const url = `${location}?apikey=${config.apiKey}`;
+    const urlPage = pageIndex == -1 ? url : `${url}&pageIndex=${pageIndex}`;
     console.log(urlPage);
     const response = await fetch(`${urlPage}`);
     if (response.status === STATUS_CODES.NOT_MODIFIED) {
@@ -70,24 +70,24 @@ const poll = async (location, pageIndex=-1) => {
   // return jsonresponse
 };
 
-const getResults = async (location, pageRequests=false, pageIndex = 0) => {
+const getResults = async (location, pageRequests = false, pageIndex = 0) => {
   try {
-    let response
-    console.log("LONGPOLL:", pageRequests, pageIndex)
+    let response;
+    console.log('LONGPOLL:', pageRequests, pageIndex);
     if (pageRequests) {
       response = await poll(location, pageIndex);
     } else {
-      response = await poll(location)
+      response = await poll(location);
     }
     // const response = await poll(location, pageIndex);
     if (response.Status && response.Status === 'UpdatesComplete') {
       response.pending = false;
-      response.page = pageIndex
+      response.page = pageIndex;
       return response;
-    } 
-    if (pageRequests && response.Status && response.Status === "UpdatesPending") {
+    }
+    if (pageRequests && response.Status && response.Status === 'UpdatesPending') {
       response.pending = true;
-      response.page = 0
+      response.page = 0;
       return response;
     }
     // if (response.Status && response.Status === "UpdatesPending") {
@@ -98,7 +98,7 @@ const getResults = async (location, pageRequests=false, pageIndex = 0) => {
     if (!pageRequests) {
       return await getResults(location);
     }
-    
+
     // return jsonresponse
   } catch (err) {
     throw err;
@@ -114,11 +114,11 @@ const searchSingle = async (params) => {
     if (params.session) {
       locationToPoll = `http://partners.api.skyscanner.net/apiservices/pricing/uk1/v1.0/${params.session}`
       return await getResults(locationToPoll, true, page)
-    } else {
+    } 
       locationToPoll = await createSession(params);
       console.log(locationToPoll)
       return await getResults(locationToPoll, true, page);
-    }
+    
     
     // return await getResults( null);
   } catch (err) {
@@ -135,7 +135,81 @@ const search = async (params) => {
   }
 };
 
+const getSegments = (segments, places, carriers) => {
+  const mappedSegments = segments.map((seg) => {
+    const sg = {
+      OriginStationPlace: places[seg.OriginStation],
+      DestinationStationPlace: places[seg.DestinationStation],
+      CarrierName: carriers[seg.Carrier],
+      OperatingCarrier: carriers[seg.OperatingCarrier],
+      ...seg,
+    };
+    return sg;
+  });
+  return mappedSegments;
+};
+
+const resultsFormater = (results) => {
+  const carriers = _.groupBy(results.Carriers, 'Id');
+  const agents = _.groupBy(results.Agents, 'Id');
+  const places = _.groupBy(results.Places, 'Id');
+  const segments = _.groupBy(results.Segments, 'Id');
+  const legs = _.groupBy(results.Legs, 'Id');
+  const stops = _.groupBy(results.Stops, 'Id');
+
+  const response = {
+    query: results.Query,
+    itineraries: [],
+    agents,
+    places,
+    segments,
+    legs,
+    carriers,
+    stops,
+    session: results.SessionKey,
+    pending: results.pending,
+    page: results.page,
+    currencies: results.Currencies[0],
+  };
+
+  const tmpIt = results.Itineraries.map((s) => {
+    let itinerary = {};
+    const [outboundLeg] = legs[s.OutboundLegId];
+    const [inboundLeg] = legs[s.InboundLegId];
+    const outboundSegments = [];
+    const inboundSegments = [];
+
+    outboundLeg.SegmentIds.forEach((id) => {
+      outboundSegments.push(segments[id][0]);
+    });
+
+
+    inboundLeg.SegmentIds.forEach((id) => {
+      inboundSegments.push(segments[id][0]);
+    });
+
+    const outs = getSegments(outboundSegments, places, carriers);
+    const ins = getSegments(inboundSegments, places, carriers);
+
+    outboundLeg.SegmentsDetail = outs;
+    outboundLeg.OriginStationPlace = places[outboundLeg.OriginStation];
+    outboundLeg.DestinationStationPlace = places[outboundLeg.DestinationStation];
+
+    inboundLeg.SegmentsDetail = ins;
+    inboundLeg.OriginStationPlace = places[inboundLeg.OriginStation];
+    inboundLeg.DestinationStationPlace = places[inboundLeg.DestinationStation];
+
+    itinerary = {
+      OutboundLeg: outboundLeg,
+      InboundLeg: inboundLeg,
+      ...s,
+    };
+    return itinerary;
+  });
+  response.itineraries = tmpIt;
+};
+
 module.exports = {
   search,
-  searchSingle
+  searchSingle,
 };
