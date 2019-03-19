@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
-
-import ApiUtils from './../../utils/api';
-import Itinerary from './Itinerary';
-import SearchForm from './../SearchForm/SearchForm'
-import ItineraryHeader from './ItineraryHeader';
-import ItineraryFilter from './ItineraryFilter';
 import BpkButton from 'bpk-component-button';
 import { BpkGridContainer, BpkGridRow, BpkGridColumn } from 'bpk-component-grid';
 import { BpkSpinner } from 'bpk-component-spinner';
 
+import { getSearch, getSearchByPage } from './../../utils/api';
+import Itinerary from './Itinerary';
+import SearchForm from './../SearchForm/SearchForm';
+import ItineraryHeader from './ItineraryHeader';
+import ItineraryFilter from './ItineraryFilter';
 import STYLES from './Itinerary.scss';
 
 const c = className => STYLES[className] || 'UNKNOWN';
@@ -21,57 +20,60 @@ class ItineraryContainer extends Component {
       itineraries: [],
       query: null,
       currency: {},
-      session: "",
+      session: '',
       currentPage: 0,
       pending: true,
       loading: false,
     };
 
-    const api = new ApiUtils();
-    this.getItineraries = this.getItineraries.bind(this, api);
-    this.onSeeMoreClick = this.onSeeMoreClick.bind(this)
-    this.getFligthData = this.getFligthData.bind(this)
+    // const api = new ApiUtils();
+    this.getItineraries = this.getItineraries.bind(this);
+    this.onSeeMoreClick = this.onSeeMoreClick.bind(this);
+    this.getFligthData = this.getFligthData.bind(this);
     this.onSearchAgainClick = this.onSearchAgainClick.bind(this);
   }
 
+  componentDidMount() {
+    console.log('mounted');
+    // this.getItineraries()
+  }
 
-  getItineraries(api, params) {
-    this.setState({ loading: true })
-    return api.getSearchByPage(params).then(d => {
+  onSeeMoreClick() {
+    const nextPage = this.state.currentPage + 1;
+    this.getItineraries(nextPage);
+  }
+
+  onSearchAgainClick() {
+    this.setState({
+      itineraries: [],
+      query: null,
+    });
+  }
+
+  getFligthData(values) {
+    this.getItineraries({ ...values });
+  }
+
+  getItineraries(params) {
+    this.setState({ loading: true });
+    return getSearchByPage(params).then((d) => {
       this.setState({
         itineraries: d.itineraries,
         currency: d.currencies,
         agents: d.agents,
         query: d.query,
-        loading: false
-      })
+        loading: false,
+      });
     });
-  }
-  componentDidMount() {
-    console.log("mounted");
-    // this.getItineraries()
-  }
-
-  getFligthData(values) {
-    console.log("SUBMITED", values);
-    this.getItineraries({ ...values })
-
-  }
-
-  onSeeMoreClick(e) {
-    let nextPage = this.state.currentPage + 1
-    this.getItineraries(nextPage)
-  }
-
-  onSearchAgainClick(e) {
-    this.setState({
-      itineraries: [],
-      query: null
-    })
   }
 
   render() {
-    const { itineraries, currency, query, agents} = this.state
+    const {
+      itineraries,
+      currency,
+      query,
+      agents,
+    } = this.state;
     const CustomSeeMore = () => (
       <div>
         <BpkButton onClick={this.onSeeMoreClick}>See More</BpkButton>
@@ -89,45 +91,42 @@ class ItineraryContainer extends Component {
           {
             query == null &&
             <BpkGridRow>
-              <SearchForm onSubmit={this.getFligthData}></SearchForm>
+              <SearchForm onSubmit={this.getFligthData} />
             </BpkGridRow>
           }
           {
             query != null &&
             <BpkGridRow>
               <BpkGridColumn width={12}>
-                <ItineraryHeader header={query}></ItineraryHeader>
-                <ItineraryFilter className={c('ItineraryFilter')}></ItineraryFilter>
+                <ItineraryHeader header={query} />
+                <ItineraryFilter className={c('ItineraryFilter')} />
               </BpkGridColumn>
             </BpkGridRow>
           }
           {
             itineraries.length > 0 &&
-            
             <BpkGridRow>
               <BpkGridColumn width={12}>
-                <Itinerary itineraries={itineraries} currency={currency} agents={agents}></Itinerary>
-                <CustomSeeMore></CustomSeeMore>
+                <Itinerary itineraries={itineraries} currency={currency} agents={agents} />
+                <CustomSeeMore />
               </BpkGridColumn>
             </BpkGridRow>
-            
-
           }
           {
             query != null &&
             <BpkGridRow>
               <BpkGridColumn width={12}>
-                <CustomSearchAgain></CustomSearchAgain>
+                <CustomSearchAgain />
               </BpkGridColumn>
             </BpkGridRow>
           }
           {
             this.state.loading &&
-            <BpkSpinner></BpkSpinner>
+            <BpkSpinner />
           }
         </BpkGridContainer>
       </div>
-    )
+    );
   }
 }
 

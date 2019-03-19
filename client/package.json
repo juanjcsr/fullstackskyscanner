@@ -50,6 +50,8 @@
     "bpk-component-pagination": "^1.0.80",
     "bpk-component-select": "^2.2.48",
     "bpk-component-spinner": "^2.2.78",
+    "bpk-tokens": "^27.4.9",
+    "prop-types": "^15.7.2",
     "react-paginate": "^6.3.0",
     "react-simple-infinite-scroll": "0.0.1"
   }
