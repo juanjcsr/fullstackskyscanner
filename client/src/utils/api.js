@@ -18,6 +18,22 @@ class ApiUtils {
             })
             .catch(console.error);
     }
+
+
+    getSearchByPage(params) {
+        const urlParams = new URLSearchParams(params);
+        const url = new URL('http://localhost:4000/api/search_page');
+        url.search = urlParams
+        console.log("apirequest", url)
+        return fetch(url)
+            .then(response => response.json())
+            .then((results) => {
+            console.log('TODO: something with these results:');
+            console.log(results);
+            return results
+        })
+            .catch(console.error);
+    }
 }
 
 export default ApiUtils;

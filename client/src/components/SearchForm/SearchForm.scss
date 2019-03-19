@@ -1,0 +1,10 @@
+@import '~bpk-mixins/index';
+
+
+.bpkdocs-forms-page {
+    &__place {
+        display: inline-block;
+        width: 32%;
+        vertical-align: bottom;
+      }
+}

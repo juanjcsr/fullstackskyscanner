@@ -28,18 +28,22 @@ app.get('/', (req, res) => {
 
 app.get('/api/search_page', async (req, res) => {
   try {
+    
     const p = {
-      OriginPlace: "EDI",
-      DestinationPlace: "LHR",
-      OutboundDate:"2019-03-19",
-      InboundDate:"2019-03-22",
-      Adults:1,
-      Children:0,
-      Infants:0,
+      OriginPlace: req.query.from,
+      DestinationPlace: req.query.to,
+      OutboundDate: req.query.departure,
+      InboundDate: req.query.returnd,
+      cabinClass: req.query.fclass,
+      Adults: req.query.adults,
+      Children: req.query.children,
+      Infants:req.query.infants,
       pageIndex: req.query.page,
       pageSize: 10,
       session: req.query.session
     };
+
+    console.log("PARAMS", p)
     const results = await livePricing.searchSingle({
       /*
        TODO: client to provide params.
@@ -59,6 +63,7 @@ app.get('/api/search_page', async (req, res) => {
       let stops = _.groupBy(results.Stops, 'Id')
       
       let itineraries = {
+        query: results.Query,
         itineraries: [],
         agents,
         places,

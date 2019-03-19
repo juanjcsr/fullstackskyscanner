@@ -2,31 +2,42 @@ import React, { Component } from 'react';
 
 import ApiUtils from './../../utils/api';
 import Itinerary from './Itinerary';
-
+import SearchForm from './../SearchForm/SearchForm'
 import BpkButton from 'bpk-component-button';
-
+import { BpkGridContainer, BpkGridRow, BpkGridColumn } from 'bpk-component-grid';
+import { BpkSpinner  } from 'bpk-component-spinner';
 
 class ItineraryContainer extends Component {
     constructor(props) {
         super(props);
         this.state = { 
             itineraries: [], 
+            query: null,
             currency: {}, 
             session: "",
             currentPage: 0,
             pending: true,
+            loading: false,
         };
 
         const api = new ApiUtils();
         console.log(api)
         this.getItineraries = this.getItineraries.bind(this, api);
         this.onSeeMoreClick = this.onSeeMoreClick.bind(this)
+        this.getFligthData = this.getFligthData.bind(this)
+        this.onSearchAgainClick = this.onSearchAgainClick.bind(this);
     }
 
 
-    getItineraries(api) {
-        return api.getSearch().then( d => {
-            this.setState({itineraries: d.itineraries, currency: d.currencies})
+    getItineraries(api, params) {
+        this.setState({loading: true})
+        return api.getSearchByPage(params).then( d => {
+            this.setState({
+                itineraries: d.itineraries, 
+                currency: d.currencies, 
+                query: d.query,
+                loading: false
+            })
         });
     }
 
@@ -91,7 +102,13 @@ class ItineraryContainer extends Component {
 
     componentDidMount(){
         console.log("mounted");
-        this.getItineraries()
+        // this.getItineraries()
+    }
+
+    getFligthData(values){
+        console.log("SUBMITED", values);
+        this.getItineraries({...values})
+        
     }
 
     onSeeMoreClick(e) {
@@ -99,19 +116,59 @@ class ItineraryContainer extends Component {
         this.getItineraries(nextPage)
     }
 
+    onSearchAgainClick(e) {
+        this.setState({
+            itineraries: [],
+            query: null
+        })
+    }
+
     render() {
-        const { itineraries, currency } = this.state
+        const { itineraries, currency, query } = this.state
         const CustomSeeMore = () => (
             <div>
-              <BpkButton onClick={this.onSeeMoreClick}>See More</BpkButton>
+                <BpkButton onClick={this.onSeeMoreClick}>See More</BpkButton>
             </div>
-          );
+        );
+
+        const CustomSearchAgain = () => (
+            <div>
+                <BpkButton onClick={this.onSearchAgainClick}>Search Again</BpkButton>
+            </div>
+        );
         console.log("RERENDERRR", itineraries, currency)
         return(
             <div>
-                <Itinerary itineraries={itineraries} currency={currency}></Itinerary>
+                <BpkGridContainer>
+                    {
+                        query == null &&
+                        <BpkGridRow>
+                            <SearchForm onSubmit={this.getFligthData}></SearchForm>
+                        </BpkGridRow>
+                    }
+                    {
+                        itineraries.length > 0 && 
+                        <BpkGridRow>
+                            <BpkGridColumn width={12}>
+                                <Itinerary itineraries={itineraries} currency={currency}></Itinerary>
+                                <CustomSeeMore></CustomSeeMore>
+                            </BpkGridColumn>
+                        </BpkGridRow>
+                    }
+                    {
+                        query != null &&
+                        <BpkGridRow>
+                            <BpkGridColumn width={12}>
+                                <CustomSearchAgain></CustomSearchAgain>
+                            </BpkGridColumn>
+                        </BpkGridRow>
+                    }
+                    {
+                        this.state.loading &&
+                        <BpkSpinner></BpkSpinner>
+                    }
+                </BpkGridContainer>
                 
-                <CustomSeeMore></CustomSeeMore>
             </div>
             
         )
