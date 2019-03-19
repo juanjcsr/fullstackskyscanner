@@ -3,9 +3,9 @@ import BpkButton from 'bpk-component-button';
 import { BpkGridContainer, BpkGridRow, BpkGridColumn } from 'bpk-component-grid';
 import { BpkSpinner } from 'bpk-component-spinner';
 
-import { getSearch, getSearchByPage } from './../../utils/api';
+import { getSearch, getSearchByPage } from '../../utils/api';
 import Itinerary from './Itinerary';
-import SearchForm from './../SearchForm/SearchForm';
+import SearchForm from '../SearchForm/SearchForm';
 import ItineraryHeader from './ItineraryHeader';
 import ItineraryFilter from './ItineraryFilter';
 import STYLES from './Itinerary.scss';
@@ -45,12 +45,7 @@ class ItineraryContainer extends Component {
     if (this.state.currentPage === 0 && this.state.pending) {
       nextPage = 0;
     }
-    // const nextPage = this.state.currentPage + 1;
-    console.log("SEEMOOORE", this.state);
-    // const p ={
-    //   pageIndex
-    // }
-    // this.getItineraries(nextPage);
+
     this.getFligthData({ session: this.state.session, page: nextPage, searchType: 'paginated' });
   }
 
@@ -69,7 +64,7 @@ class ItineraryContainer extends Component {
     this.setState({ loading: true });
     if (params.searchType === 'all') {
       return getSearch(params).then((d) => {
-        this.ref.current.scrollIntoView({behavior: 'smooth'})
+        this.ref.current.scrollIntoView({ behavior: 'smooth' });
         this.setState({
           itineraries: d.itineraries,
           currency: d.currencies,
@@ -84,7 +79,7 @@ class ItineraryContainer extends Component {
       if (this.state.itineraries.length === 0) {
         itineraries = [...d.itineraries];
         // console.log(this.ref);
-        this.myRef.current.scrollIntoView({behavior: 'smooth'})
+        this.myRef.current.scrollIntoView({ behavior: 'smooth' });
       }
       if (parseInt(d.page, 10) > parseInt(this.state.currentPage, 10)) {
         itineraries = this.state.itineraries.concat(d.itineraries);

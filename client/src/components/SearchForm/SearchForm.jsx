@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 
 import BpkSelect from 'bpk-component-select';
 import BpkButton from 'bpk-component-button';
-import BpkCheckbox from 'bpk-component-checkbox';
 import BpkLabel from 'bpk-component-label';
 import BpkInput, { INPUT_TYPES } from 'bpk-component-input';
 

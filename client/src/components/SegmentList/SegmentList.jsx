@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { BpkGridContainer, BpkGridRow, BpkGridColumn } from 'bpk-component-grid';
 import BpkText from 'bpk-component-text/src/BpkText';
-import AirlineIcon from './Icon';
+import AirlineIcon from './../AirlineIcon/AirlineIcon';
 
 const datestringToDate = (dateString) => {
   const d = new Date(dateString);

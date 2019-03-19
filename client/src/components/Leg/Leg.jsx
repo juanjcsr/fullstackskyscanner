@@ -5,7 +5,7 @@ import { BpkGridColumn } from 'bpk-component-grid';
 import BpkText from 'bpk-component-text';
 import BpkSmallLongArrowRigthIcon from 'bpk-component-icon/sm/long-arrow-right';
 import BpkSmallLongArrowLeftIcon from 'bpk-component-icon/sm/long-arrow-left';
-import AirlineIcon from '../card/Icon';
+import AirlineIcon from './../AirlineIcon/AirlineIcon';
 
 const datestringToDate = (dateString) => {
   const d = new Date(dateString);

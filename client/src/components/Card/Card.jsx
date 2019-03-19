@@ -7,8 +7,8 @@ import BpkButton from 'bpk-component-button';
 import BpkText from 'bpk-component-text';
 import { BpkAccordion, BpkAccordionItem, withAccordionItemState } from 'bpk-component-accordion';
 
-import Leg from './Leg';
-import SegmentList from './SegmentList';
+import Leg from './../Leg/Leg';
+import SegmentList from './../SegmentList/SegmentList';
 
 import STYLES from './Card.scss';
 
