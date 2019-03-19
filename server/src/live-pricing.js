@@ -3,6 +3,7 @@
 
 const fetch = require('node-fetch');
 const querystring = require('querystring');
+const _ = require('lodash');
 
 const config = require('./config');
 
@@ -149,7 +150,7 @@ const getSegments = (segments, places, carriers) => {
   return mappedSegments;
 };
 
-const resultsFormater = (results) => {
+const resultsFormatter = (results) => {
   const carriers = _.groupBy(results.Carriers, 'Id');
   const agents = _.groupBy(results.Agents, 'Id');
   const places = _.groupBy(results.Places, 'Id');
@@ -207,9 +208,11 @@ const resultsFormater = (results) => {
     return itinerary;
   });
   response.itineraries = tmpIt;
+  return response;
 };
 
 module.exports = {
   search,
   searchSingle,
+  resultsFormatter,
 };
