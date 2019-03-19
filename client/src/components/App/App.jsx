@@ -1,6 +1,4 @@
 import React, { PureComponent } from 'react';
-import BpkText from 'bpk-component-text';
-
 import STYLES from './App.scss';
 import Header from './../Header';
 
@@ -22,22 +20,10 @@ class App extends PureComponent{
       <div className={c('App')}>
         <Header />
         <main className={c('App__main')}>
-          <BpkText tagName="p">Over to you...</BpkText>
           <ItineraryContainer></ItineraryContainer>
         </main>
       </div>
     )
   }
 }
-
-// const App = () => (
-//   <div className={c('App')}>
-//     <Header />
-//     <main className={c('App__main')}>
-//       <BpkText tagName="p">Over to you...</BpkText>
-//       <Itinerary></Itinerary>
-//     </main>
-//   </div>
-// );
-
 export default App;

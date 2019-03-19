@@ -8,10 +8,6 @@ class Itinerary extends PureComponent{
     constructor(props) {
         super(props)
         console.log("AFSDFSFASFASF", props)
-        this.state = { 
-            itineraries: props.itineraries, 
-            currency: props.currency, 
-        };
         // const api = new ApiUtils();
         // console.log(api)
         // this.getItineraries = this.getItineraries.bind(this, api);
@@ -27,15 +23,15 @@ class Itinerary extends PureComponent{
         // })
     }
 
-    createCards(itineraries, currency) {
+    createCards(itineraries, currency, agents) {
         let cards = [];
         if(itineraries.length) {
-            // console.log(this.state.itineraries)
+            console.log(this.props.itineraries)
             console.log("RERENDER")
             // const { itineraries, currency } = this.state;
             itineraries.map( (c,i) => {
-                // console.log(c);
-                cards.push(<Card key={i} itinerary={c} currency={currency}></Card>)
+                const agent = 
+                cards.push(<Card key={i} itinerary={c} currency={currency} agent={agents[c.PricingOptions[0].Agents[0]]}></Card>)
             })
         }
         return cards
@@ -43,12 +39,12 @@ class Itinerary extends PureComponent{
 
 
     render() {
-        const { itineraries, currency } = this.props
+        const { itineraries, currency, agents } = this.props
         
         return (
             <div id="modal-container">
                 <div id="pagewrap">
-                    {this.createCards(itineraries, currency)}
+                    {this.createCards(itineraries, currency, agents)}
                 </div>
             </div>
             

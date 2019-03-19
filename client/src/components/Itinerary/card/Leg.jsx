@@ -13,9 +13,13 @@ const datestringToDate = ( dateString ) =>{
 
 
 const Leg = ({legData, directionality, ...props}) => {
-    const legTime = `${Math.floor(legData.Duration / 60)}h ${legData.Duration % 60}m `
-    const stops = legData.Stops.length === 0 ? "Direct" : `${legData.Stops.length} Stops`
+    const legTime = `${Math.floor(legData.Duration / 60)}h ${legData.Duration % 60}m `;
+    const stops = legData.Stops.length === 0 ? "Direct" : `${legData.Stops.length} Stops`;
     const firstCarrier = legData.SegmentsDetail[0].CarrierName[0];
+    const color = stops === 'Direct' ? 'rgb(0, 215, 117)' : 'rgb(255, 84, 82)';
+    const backgroundColor = {
+        "color": color
+    };
     return (        
         <>
             <BpkGridColumn width={1}>
@@ -32,9 +36,9 @@ const Leg = ({legData, directionality, ...props}) => {
                 <BpkText tagName="p">{datestringToDate(legData.Arrival)}</BpkText>
                 <BpkText tagName="p">{legData.DestinationStationPlace[0].Code}</BpkText>
             </BpkGridColumn>   
-            <BpkGridColumn width={6}>
+            <BpkGridColumn width={3} offset={3}>
                 <BpkText tagName="p">{legTime}</BpkText>
-                <BpkText tagName="p">{stops}</BpkText>
+                <BpkText tagName="p" style={backgroundColor}>{stops}</BpkText>
             </BpkGridColumn>
         </>
     )
