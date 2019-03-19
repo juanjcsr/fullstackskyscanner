@@ -18,6 +18,8 @@
     "bpk-component-text": "^1.0.108",
     "bpk-mixins": "^17.16.1",
     "bpk-stylesheets": "^3.2.155",
+    "enzyme": "^3.9.0",
+    "enzyme-adapter-react-16": "^1.11.2",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-skyscanner": "^3.0.0",

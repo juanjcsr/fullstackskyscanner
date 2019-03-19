@@ -1,0 +1,2212 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Itinerary should render correctly 1`] = `
+<div
+  id="modal-container"
+>
+  <div
+    id="pagewrap"
+  />
+</div>
+`;
+
+exports[`Itinerary should render correctly with data 1`] = `
+<div
+  id="modal-container"
+>
+  <div
+    id="pagewrap"
+  >
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                21:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 20m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                15:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                16:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £173.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                21:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 20m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                16:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                18:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £236.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                21:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 20m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                20:55
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                22:20
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £151.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                13:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                15:15
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                18:20
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:45
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £313.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                7:20
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                8:55
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 35m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                11:25
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                12:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £415.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                8:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                10:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                13:55
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                15:20
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £398.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                21:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 20m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                17:35
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                19:5
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £173.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                8:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                10:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                15:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                16:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £415.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                8:40
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                10:10
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                11:25
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                12:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £415.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="bpk-card bpk-card--padded Card"
+      onClick={[Function]}
+      role="button"
+    >
+      <div
+        className="bpk-grid__container"
+      >
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                13:50
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M14.4 19.5l5.7-5.3c.4-.4.7-.9.8-1.5.1-.3.1-.5.1-.7s0-.4-.1-.6c-.1-.6-.4-1.1-.8-1.5l-5.7-5.3c-.8-.8-2.1-.7-2.8.1-.8.8-.7 2.1.1 2.8l2.7 2.5H5c-1.1 0-2 .9-2 2s.9 2 2 2h9.4l-2.7 2.5c-.5.4-.7 1-.7 1.5s.2 1 .5 1.4c.8.8 2.1.8 2.9.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                15:15
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 25m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <div>
+                <img
+                  alt=""
+                  src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+                  style={
+                    Object {
+                      "position": "relative",
+                      "width": "30px",
+                    }
+                  }
+                />
+              </div>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                6:15
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                LHR
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+            >
+              <svg
+                height="18"
+                style={
+                  Object {
+                    "height": "1.125rem",
+                    "width": "1.125rem",
+                  }
+                }
+                viewBox="0 0 24 24"
+                width="18"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+                />
+              </svg>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                7:45
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                EDI
+              </p>
+            </div>
+            <div
+              className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+            >
+              <p
+                className="bpk-text bpk-text--base"
+              >
+                1h 30m 
+              </p>
+              <p
+                className="bpk-text bpk-text--base"
+                style={
+                  Object {
+                    "color": "rgb(0, 215, 117)",
+                  }
+                }
+              >
+                Direct
+              </p>
+            </div>
+          </div>
+        </div>
+        <div
+          className="bpk-grid__row bpk-grid__row--padded"
+        >
+          <div
+            className="bpk-grid__column bpk-grid__column--8 bpk-grid__column--padded"
+          >
+            <p
+              className="bpk-text bpk-text--lg bpk-text--bold"
+            >
+              £341.06
+               
+            </p>
+            <p
+              className="bpk-text bpk-text--base"
+            >
+              British Airways
+            </p>
+          </div>
+          <div
+            className="bpk-grid__column bpk-grid__column--4 bpk-grid__column--padded"
+          >
+            <button
+              className="bpk-button"
+              disabled={false}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

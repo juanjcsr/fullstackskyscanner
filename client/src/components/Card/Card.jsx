@@ -72,9 +72,26 @@ Card.propTypes = {
 };
 
 Card.defaultProps = {
-  itinerary: {},
-  currency: {},
-  agent: [],
+  itinerary: {
+    OutboundLeg: {
+      Directionality: 'Outbound',
+      Stops: [],
+      
+    },
+    InboundLeg: {
+      Directionality: 'Inbound',
+      Stops: [],
+    },
+    PricingOptions: [{
+      Price: 0,
+    }],
+  },
+  currency: {
+    Code: 'GBP',
+  },
+  agent: [{
+    Name: '',
+  }],
   onClick: () => {},
 };
 

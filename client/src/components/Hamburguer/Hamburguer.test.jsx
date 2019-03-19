@@ -1,12 +1,11 @@
 import React from 'react';
 import TestRenderer from 'react-test-renderer';
 
-import Header from './Header';
+import Hamburger from './Hamburguer';
 
-describe('Header', () => {
+describe('Hamburguer', () => {
   it('should render correctly', () => {
-    const tree = TestRenderer.create(<Header />).toJSON();
+    const tree = TestRenderer.create(<Hamburger />).toJSON();
     expect(tree).toMatchSnapshot();
   });
 });
-

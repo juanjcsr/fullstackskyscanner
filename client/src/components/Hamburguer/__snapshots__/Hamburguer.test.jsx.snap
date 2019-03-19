@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Hamburguer should render correctly 1`] = `
+<div>
+  <div
+    className="hamburguer"
+  />
+  <div
+    className="hamburguer"
+  />
+  <div
+    className="hamburguer"
+  />
+</div>
+`;

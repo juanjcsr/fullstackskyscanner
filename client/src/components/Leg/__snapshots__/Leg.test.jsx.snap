@@ -1,0 +1,177 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Leg should be rendered correctly with data 1`] = `
+<div>
+  <div
+    className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+  >
+    <div>
+      <img
+        alt=""
+        src="https://logos.skyscnr.com/images/airlines/favicon/BA.png"
+        style={
+          Object {
+            "position": "relative",
+            "width": "30px",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      19:50
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      EDI
+    </p>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+  >
+    <svg
+      height="18"
+      style={
+        Object {
+          "height": "1.125rem",
+          "width": "1.125rem",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+      />
+    </svg>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      21:10
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      LHR
+    </p>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      1h 20m 
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+      style={
+        Object {
+          "color": "rgb(0, 215, 117)",
+        }
+      }
+    >
+      Direct
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Leg should be rendered without data 1`] = `
+<div>
+  <div
+    className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+  >
+    <div>
+      <img
+        alt=""
+        src="https://logos.skyscnr.com/images/airlines/favicon/.png"
+        style={
+          Object {
+            "position": "relative",
+            "width": "30px",
+          }
+        }
+      />
+    </div>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      NaN:NaN
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      
+    </p>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--1 bpk-grid__column--padded"
+  >
+    <svg
+      height="18"
+      style={
+        Object {
+          "height": "1.125rem",
+          "width": "1.125rem",
+        }
+      }
+      viewBox="0 0 24 24"
+      width="18"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <path
+        d="M9.6 4.5L3.9 9.9c-.4.4-.7.9-.8 1.5-.1.2-.1.4-.1.6 0 .2 0 .4.1.6.1.6.4 1.1.8 1.5l5.7 5.3c.8.8 2.1.7 2.8-.1.8-.8.7-2.1-.1-2.8L9.6 14H19c1.1 0 2-.9 2-2s-.9-2-2-2H9.6l2.7-2.5c.5-.4.7-1 .7-1.5s-.2-1-.5-1.4c-.8-.8-2.1-.8-2.9-.1z"
+      />
+    </svg>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--2 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      NaN:NaN
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      
+    </p>
+  </div>
+  <div
+    className="bpk-grid__column bpk-grid__column--3 bpk-grid__column--offset-3 bpk-grid__column--padded"
+  >
+    <p
+      className="bpk-text bpk-text--base"
+    >
+      NaNh NaNm 
+    </p>
+    <p
+      className="bpk-text bpk-text--base"
+      style={
+        Object {
+          "color": "rgb(0, 215, 117)",
+        }
+      }
+    >
+      Direct
+    </p>
+  </div>
+</div>
+`;

@@ -18,5 +18,16 @@ exports[`Header should render correctly 1`] = `
       src="logo.svg"
     />
   </a>
+  <div>
+    <div
+      className="hamburguer"
+    />
+    <div
+      className="hamburguer"
+    />
+    <div
+      className="hamburguer"
+    />
+  </div>
 </header>
 `;
