@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 
 import BpkSelect from 'bpk-component-select';
 import BpkButton from 'bpk-component-button';
+import BpkCheckbox from 'bpk-component-checkbox';
 import BpkLabel from 'bpk-component-label';
 import BpkInput, { INPUT_TYPES } from 'bpk-component-input';
 
@@ -17,6 +18,7 @@ class SearchForm extends Component {
       fclass: 'economy',
       departure: '2019-03-25',
       returnd: '2019-03-26',
+      searchType: 'paginated',
     };
 
     this.getFlights = this.getFlights.bind(this);
@@ -31,7 +33,6 @@ class SearchForm extends Component {
 
   changeHandler = (event) => {
     const { name, value } = event.target;
-
     this.setState({
       [name]: value,
     });
@@ -44,6 +45,7 @@ class SearchForm extends Component {
       fclass,
       departure,
       returnd,
+      searchType,
     } = this.state;
     return (
 
@@ -163,6 +165,19 @@ class SearchForm extends Component {
           value={returnd}
           placeholder="Country, city or airport"
         />
+
+        <BpkLabel>Search type:</BpkLabel>
+        <BpkSelect
+          id="searchType"
+          name="searchType"
+          label="Search type"
+          value={searchType}
+          onChange={this.changeHandler}
+        >
+          <option value="paginated">Paginated</option>
+          <option value="all">All results (slower)</option>
+
+        </BpkSelect>
         <BpkButton onClick={this.getFlights}>Search Flights</BpkButton>
       </form>
 

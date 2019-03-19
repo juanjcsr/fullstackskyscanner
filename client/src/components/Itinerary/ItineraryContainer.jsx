@@ -26,6 +26,7 @@ class ItineraryContainer extends Component {
       loading: false,
     };
 
+    this.myRef = React.createRef();
     // const api = new ApiUtils();
     this.getItineraries = this.getItineraries.bind(this);
     this.onSeeMoreClick = this.onSeeMoreClick.bind(this);
@@ -39,8 +40,18 @@ class ItineraryContainer extends Component {
   }
 
   onSeeMoreClick() {
-    const nextPage = this.state.currentPage + 1;
-    this.getItineraries(nextPage);
+    let nextPage = parseInt(this.state.currentPage, 10) + 1;
+
+    if (this.state.currentPage === 0 && this.state.pending) {
+      nextPage = 0;
+    }
+    // const nextPage = this.state.currentPage + 1;
+    console.log("SEEMOOORE", this.state);
+    // const p ={
+    //   pageIndex
+    // }
+    // this.getItineraries(nextPage);
+    this.getFligthData({ session: this.state.session, page: nextPage, searchType: 'paginated' });
   }
 
   onSearchAgainClick() {
@@ -56,13 +67,37 @@ class ItineraryContainer extends Component {
 
   getItineraries(params) {
     this.setState({ loading: true });
+    if (params.searchType === 'all') {
+      return getSearch(params).then((d) => {
+        this.ref.current.scrollIntoView({behavior: 'smooth'})
+        this.setState({
+          itineraries: d.itineraries,
+          currency: d.currencies,
+          agents: d.agents,
+          query: d.query,
+          loading: false,
+        });
+      });
+    }
     return getSearchByPage(params).then((d) => {
+      let itineraries = [...this.state.itineraries];
+      if (this.state.itineraries.length === 0) {
+        itineraries = [...d.itineraries];
+        // console.log(this.ref);
+        this.myRef.current.scrollIntoView({behavior: 'smooth'})
+      }
+      if (parseInt(d.page, 10) > parseInt(this.state.currentPage, 10)) {
+        itineraries = this.state.itineraries.concat(d.itineraries);
+      }
       this.setState({
-        itineraries: d.itineraries,
+        itineraries,
         currency: d.currencies,
         agents: d.agents,
         query: d.query,
+        pending: d.pending,
         loading: false,
+        currentPage: d.page,
+        session: d.session,
       });
     });
   }
@@ -86,7 +121,7 @@ class ItineraryContainer extends Component {
       </div>
     );
     return (
-      <div>
+      <div ref={this.myRef}>
         <BpkGridContainer>
           {
             query == null &&

@@ -41,6 +41,7 @@
     "bpk-component-accordion": "^1.2.70",
     "bpk-component-button": "^2.1.48",
     "bpk-component-card": "^1.1.61",
+    "bpk-component-checkbox": "^1.4.77",
     "bpk-component-grid": "^1.1.117",
     "bpk-component-icon": "^3.27.1",
     "bpk-component-infinite-scroll": "^2.2.10",
