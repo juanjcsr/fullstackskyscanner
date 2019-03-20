@@ -11,6 +11,6 @@
     "pretest": "(cd ./client && npm run lint) && (cd ./server && npm run lint)",
     "test": "(cd ./client && CI=true npm test) && (cd ./server && CI=true npm test)",
     "start": "echo 'Did you mean `npm run server` or `npm run client`?'",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install && npm run build --prefix client"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm run build --prefix client"
   }
 }

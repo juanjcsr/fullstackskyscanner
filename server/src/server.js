@@ -94,7 +94,9 @@ app.get('/api/search', async (req, res) => {
   }
 });
 
-const server = app.listen(4000, () => {
+const port = process.env.PORT || 4000;
+
+const server = app.listen(port, () => {
   console.log('Node server listening on http://localhost:4000');
 });
 
