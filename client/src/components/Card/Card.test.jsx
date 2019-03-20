@@ -130,8 +130,13 @@ describe('Card', () => {
       }],
       BookingDetailsLink: { Uri: '/apiservices/pricing/v1.0/b50413b6-3968-46ca-bf13-f8dfaf1db317/booking', Body: 'OutboundLegId=11235-1903250720--32302,-32753-1-13554-1903251425&InboundLegId=13554-1903261820--32480-0-11235-1903261945', Method: 'PUT' },
     };
-    const agent = [{"Id":2628363,"Name":"GotoGate","ImageUrl":"https://s1.apideeplink.com/images/websites/gtuk.png","Status":"UpdatesComplete","OptimisedForMobile":true,"Type":"TravelAgent"}];
-    const currency = {"Code":"GBP","Symbol":"£","ThousandsSeparator":",","DecimalSeparator":".","SymbolOnLeft":true,"SpaceBetweenAmountAndSymbol":false,"RoundingCoefficient":0,"DecimalDigits":2}
+    const agent = [{
+      Id: 2628363, Name: 'GotoGate', ImageUrl: 'https://s1.apideeplink.com/images/websites/gtuk.png', Status: 'UpdatesComplete', OptimisedForMobile: true, Type: 'TravelAgent',
+    }];
+    const currency = {
+      Code: 'GBP', Symbol: '£', ThousandsSeparator: ',', DecimalSeparator: '.', SymbolOnLeft: true, SpaceBetweenAmountAndSymbol: false, RoundingCoefficient: 0, DecimalDigits: 2,
+    };
+    // eslint-disable-next-line max-len
     const component = TestRenderer.create(<Card itinerary={itinerary} agent={agent} currency={currency} />);
     const tree = component.toJSON();
     expect(tree).toMatchSnapshot();

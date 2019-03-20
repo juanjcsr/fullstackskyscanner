@@ -1,9 +1,9 @@
 @import '~bpk-mixins';
 
 .App {
+  background-color: rgb(243, 242, 245);
+
   &__main {
     padding: $bpk-spacing-sm;
   }
-
-  background-color: rgb(243, 242, 245)
 }

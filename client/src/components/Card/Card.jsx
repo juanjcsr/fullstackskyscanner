@@ -76,7 +76,6 @@ Card.defaultProps = {
     OutboundLeg: {
       Directionality: 'Outbound',
       Stops: [],
-      
     },
     InboundLeg: {
       Directionality: 'Inbound',

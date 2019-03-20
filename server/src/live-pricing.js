@@ -56,7 +56,7 @@ const poll = async (location, pageIndex = -1) => {
   // console.log('Polling results..', `${location}?apikey=${config.apiKey}&pageIndex=${pageIndex}`);
   try {
     const url = `${location}?apikey=${config.apiKey}`;
-    const urlPage = pageIndex == -1 ? url : `${url}&pageIndex=${pageIndex}`;
+    const urlPage = pageIndex === -1 ? url : `${url}&pageIndex=${pageIndex}`;
     console.log(urlPage);
     const response = await fetch(`${urlPage}`);
     if (response.status === STATUS_CODES.NOT_MODIFIED) {
@@ -99,29 +99,27 @@ const getResults = async (location, pageRequests = false, pageIndex = 0) => {
     if (!pageRequests) {
       return await getResults(location);
     }
+    return null;
 
     // return jsonresponse
   } catch (err) {
-    throw err;
+    return err;
   }
 };
 
 const searchSingle = async (params) => {
   try {
-    let locationToPoll = ""
-    
-    let page = !!params.pageIndex ? params.pageIndex : 0;
-    console.log( " PAGE", params, page);
+    let locationToPoll = '';
+
+    const page = params.pageIndex ? params.pageIndex : 0;
+    // console.log( " PAGE", params, page);
     if (params.session) {
-      locationToPoll = `http://partners.api.skyscanner.net/apiservices/pricing/uk1/v1.0/${params.session}`
-      return await getResults(locationToPoll, true, page)
-    } 
-      locationToPoll = await createSession(params);
-      console.log(locationToPoll)
+      locationToPoll = `http://partners.api.skyscanner.net/apiservices/pricing/uk1/v1.0/${params.session}`;
       return await getResults(locationToPoll, true, page);
-    
-    
-    // return await getResults( null);
+    }
+    locationToPoll = await createSession(params);
+    console.log(locationToPoll);
+    return await getResults(locationToPoll, true, page);
   } catch (err) {
     throw err;
   }

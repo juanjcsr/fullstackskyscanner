@@ -34,11 +34,6 @@ class ItineraryContainer extends Component {
     this.onSearchAgainClick = this.onSearchAgainClick.bind(this);
   }
 
-  componentDidMount() {
-    console.log('mounted');
-    // this.getItineraries()
-  }
-
   onSeeMoreClick() {
     let nextPage = parseInt(this.state.currentPage, 10) + 1;
 
@@ -64,7 +59,7 @@ class ItineraryContainer extends Component {
     this.setState({ loading: true });
     if (params.searchType === 'all') {
       return getSearch(params).then((d) => {
-        this.ref.current.scrollIntoView({ behavior: 'smooth' });
+        this.myRef.current.scrollIntoView({ behavior: 'smooth' });
         this.setState({
           itineraries: d.itineraries,
           currency: d.currencies,

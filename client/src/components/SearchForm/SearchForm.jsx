@@ -27,6 +27,7 @@ class SearchForm extends Component {
   getFlights(event) {
     event.preventDefault();
     console.log('toSubmit', this.state);
+    // eslint-disable-next-line react/prop-types
     this.props.onSubmit(this.state);
   }
 

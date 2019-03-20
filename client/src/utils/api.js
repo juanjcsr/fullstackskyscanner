@@ -7,11 +7,9 @@ const getSearch = (params) => {
   const urlParams = new URLSearchParams(params);
   const url = new URL('http://localhost:4000/api/search');
   url.search = urlParams;
-  console.log('apirequest', url);
   return fetch(url)
     .then(response => response.json())
     .then((results) => {
-      console.log('TODO: something with these results:');
       console.log(results);
       return results;
     })
@@ -23,11 +21,9 @@ const getSearchByPage = (params) => {
   const urlParams = new URLSearchParams(params);
   const url = new URL('http://localhost:4000/api/search_page');
   url.search = urlParams;
-  console.log('apirequest111', url, params);
   return fetch(url)
     .then(response => response.json())
     .then((results) => {
-      console.log('TODO: something with these results:');
       console.log(results);
       return results;
     })

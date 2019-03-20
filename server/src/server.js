@@ -2,7 +2,7 @@
 // Disabling 'no-console' as it's reasonable for this file to do some logging.
 
 const express = require('express');
-const _ = require('lodash');
+const path = require('path');
 
 const app = express();
 const livePricing = require('./live-pricing');
@@ -13,7 +13,16 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
+const staticOptionsObj = {
+  extensions: ['html'],
+};
+
+if (process.env.NODE_ENV === 'production') {
+  const pathRoot = path.normalize('./../client/build');
+  app.use(express.static(pathRoot, staticOptionsObj));
+}
+
+app.get('/api/hello', (req, res) => {
   res.send('Hello World!');
 });
 
@@ -57,8 +66,8 @@ app.get('/api/search_page', async (req, res) => {
     });
     return res.json(livePricing.resultsFormatter(results));
   } catch (err) {
-    res.status(500).send(err);
-    console.error(err);
+    return res.status(500).send(err);
+    // console.error(err);
   }
 });
 
@@ -80,11 +89,13 @@ app.get('/api/search', async (req, res) => {
     // let out = _.groupBy(res.Itineraries, 'OutboundLegId')
     return res.json(livePricing.resultsFormatter(results));
   } catch (err) {
-    res.status(500).send(err);
     console.error(err);
+    return res.status(500).send(err);
   }
 });
 
-app.listen(4000, () => {
+const server = app.listen(4000, () => {
   console.log('Node server listening on http://localhost:4000');
 });
+
+module.exports = { app, server };
