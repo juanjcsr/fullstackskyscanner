@@ -53,8 +53,10 @@ const Card = ({
       {(itinerary.OutboundLeg.Stops.length > 0 || itinerary.InboundLeg.Stops.length > 0) &&
         <BpkAccordion>
           <StatefulAccordionItem id="stops" title="Stops">
+            ---------- Outbound Flights
             <SegmentList segments={itinerary.OutboundLeg.SegmentsDetail} />
             ----------
+            Inbound Flights
             <SegmentList segments={itinerary.InboundLeg.SegmentsDetail} />
           </StatefulAccordionItem>
         </BpkAccordion>
