@@ -40,11 +40,8 @@
     "bpk-component-checkbox": "^1.4.77",
     "bpk-component-grid": "^1.1.117",
     "bpk-component-icon": "^3.27.1",
-    "bpk-component-infinite-scroll": "^2.2.10",
     "bpk-component-input": "^3.3.68",
     "bpk-component-label": "^3.2.116",
-    "bpk-component-modal": "^1.8.40",
-    "bpk-component-pagination": "^1.0.80",
     "bpk-component-select": "^2.2.48",
     "bpk-component-spinner": "^2.2.78",
     "backpack-react-scripts": "^7.0.0",
@@ -54,8 +51,6 @@
     "bpk-tokens": "^27.4.9",
     "prop-types": "^15.7.2",
     "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-paginate": "^6.3.0",
-    "react-simple-infinite-scroll": "0.0.1"
+    "react-dom": "^16.4.2"
   }
 }

@@ -301,6 +301,7 @@ exports[`Card should be rendered correctly with data 1`] = `
             id="stops_content"
             role="region"
           >
+            ---------- Outbound Flights
             <div
               className="bpk-grid__container"
             >
@@ -485,7 +486,7 @@ exports[`Card should be rendered correctly with data 1`] = `
                 </div>
               </div>
             </div>
-            ----------
+            ---------- Inbound Flights
             <div
               className="bpk-grid__container"
             >

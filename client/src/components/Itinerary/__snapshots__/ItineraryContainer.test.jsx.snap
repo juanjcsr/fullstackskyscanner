@@ -24,7 +24,7 @@ exports[`ItineraryContainer should render correctly without flight data 1`] = `
           name="from"
           placeholder="Country, city or airport"
           type="text"
-          value="Edimburg"
+          value="Edimburgh"
         />
         <label
           className="bpk-label"

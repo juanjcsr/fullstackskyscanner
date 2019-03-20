@@ -57,7 +57,7 @@ const poll = async (location, pageIndex = -1) => {
   try {
     const url = `${location}?apikey=${config.apiKey}`;
     const urlPage = pageIndex === -1 ? url : `${url}&pageIndex=${pageIndex}`;
-    console.log(urlPage);
+    console.log('Polling results..', urlPage);
     const response = await fetch(`${urlPage}`);
     if (response.status === STATUS_CODES.NOT_MODIFIED) {
       return cache;
@@ -68,19 +68,16 @@ const poll = async (location, pageIndex = -1) => {
   } catch (err) {
     throw err;
   }
-  // return jsonresponse
 };
 
 const getResults = async (location, pageRequests = false, pageIndex = 0) => {
   try {
     let response;
-    console.log('LONGPOLL:', pageRequests, pageIndex);
     if (pageRequests) {
       response = await poll(location, pageIndex);
     } else {
       response = await poll(location);
     }
-    // const response = await poll(location, pageIndex);
     if (response.Status && response.Status === 'UpdatesComplete') {
       response.pending = false;
       response.page = pageIndex;
@@ -91,11 +88,6 @@ const getResults = async (location, pageRequests = false, pageIndex = 0) => {
       response.page = 0;
       return response;
     }
-    // if (response.Status && response.Status === "UpdatesPending") {
-    //   response.pending = true;
-    //   response.page = 0
-    //   return response;
-    // }
     if (!pageRequests) {
       return await getResults(location);
     }
@@ -107,12 +99,12 @@ const getResults = async (location, pageRequests = false, pageIndex = 0) => {
   }
 };
 
+// Make a request to SkyScanner API to get paginated results
 const searchSingle = async (params) => {
   try {
     let locationToPoll = '';
 
     const page = params.pageIndex ? params.pageIndex : 0;
-    // console.log( " PAGE", params, page);
     if (params.session) {
       locationToPoll = `http://partners.api.skyscanner.net/apiservices/pricing/uk1/v1.0/${params.session}`;
       return await getResults(locationToPoll, true, page);
@@ -134,6 +126,7 @@ const search = async (params) => {
   }
 };
 
+// getSegments adds places and carrier info to a single segment by their ID
 const getSegments = (segments, places, carriers) => {
   const mappedSegments = segments.map((seg) => {
     const sg = {
@@ -148,33 +141,32 @@ const getSegments = (segments, places, carriers) => {
   return mappedSegments;
 };
 
+// groups segments with their carrier and place info
+// and returns them inside their corresponding itinerary's legs
 const resultsFormatter = (results) => {
+  // First group by Id carriers, agents, places, segments and legs to
+  // make them searchable
   const carriers = _.groupBy(results.Carriers, 'Id');
   const agents = _.groupBy(results.Agents, 'Id');
   const places = _.groupBy(results.Places, 'Id');
   const segments = _.groupBy(results.Segments, 'Id');
   const legs = _.groupBy(results.Legs, 'Id');
-  const stops = _.groupBy(results.Stops, 'Id');
 
   const response = {
     query: results.Query,
     itineraries: [],
     agents,
-    places,
-    // segments,
-    legs,
-    carriers,
-    stops,
     session: results.SessionKey,
     pending: results.pending,
     page: results.page,
     currencies: results.Currencies[0],
   };
 
-  const tmpIt = results.Itineraries.map((s) => {
+  // Get an array of itineraries with their corresponding leg data.
+  const tmpIts = results.Itineraries.map((i) => {
     let itinerary = {};
-    const [outboundLeg] = legs[s.OutboundLegId];
-    const [inboundLeg] = legs[s.InboundLegId];
+    const [outboundLeg] = legs[i.OutboundLegId];
+    const [inboundLeg] = legs[i.InboundLegId];
     const outboundSegments = [];
     const inboundSegments = [];
 
@@ -187,9 +179,11 @@ const resultsFormatter = (results) => {
       inboundSegments.push(segments[id][0]);
     });
 
+    // group inbound or outbound segments
     const outs = getSegments(outboundSegments, places, carriers);
     const ins = getSegments(inboundSegments, places, carriers);
 
+    // Add places info to outbound and inbound legs
     outboundLeg.SegmentsDetail = outs;
     outboundLeg.OriginStationPlace = places[outboundLeg.OriginStation];
     outboundLeg.DestinationStationPlace = places[outboundLeg.DestinationStation];
@@ -198,14 +192,15 @@ const resultsFormatter = (results) => {
     inboundLeg.OriginStationPlace = places[inboundLeg.OriginStation];
     inboundLeg.DestinationStationPlace = places[inboundLeg.DestinationStation];
 
+    // puts everything together inside the current itinerary
     itinerary = {
       OutboundLeg: outboundLeg,
       InboundLeg: inboundLeg,
-      ...s,
+      ...i,
     };
     return itinerary;
   });
-  response.itineraries = tmpIt;
+  response.itineraries = tmpIts;
   return response;
 };
 

@@ -37,9 +37,6 @@ const searchParamsHandler = (params, type = 'full') => {
     Adults: params.adults,
     Children: params.children,
     Infants: params.infants,
-    // pageIndex: params.page,
-    // pageSize: 10,
-    // session: params.session,
   };
   if (type !== 'full') {
     p.pageIndex = params.page;
@@ -50,14 +47,15 @@ const searchParamsHandler = (params, type = 'full') => {
 };
 
 /**
-  Simple flight search api wrapper.
+  Simple flight search api wrapper, paginated.
 
-  TODO: client should provide params.
+  It returns the first batch of results based on provided params and the current page.
+  By providing the oage via the 'page' param, it returns the next results in the
+  the remote API
 
   API params and location values are here:
   http://business.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart
 */
-
 app.get('/api/search_page', async (req, res) => {
   try {
     const p = searchParamsHandler(req.query, 'single');
@@ -71,7 +69,14 @@ app.get('/api/search_page', async (req, res) => {
   }
 });
 
+/**
+  Simple flight search api wrapper.
 
+  This endpoint longpolls Skyscanner API.
+
+  API params and location values are here:
+  http://business.skyscanner.net/portal/en-GB/Documentation/FlightsLivePricingQuickStart
+*/
 app.get('/api/search', async (req, res) => {
   try {
     const p = searchParamsHandler(req.query);
