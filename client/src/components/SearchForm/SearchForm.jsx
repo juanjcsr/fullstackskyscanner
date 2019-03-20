@@ -57,7 +57,7 @@ class SearchForm extends Component {
           disabled
           type={INPUT_TYPES.text}
           name="from"
-          value="Edimburg"
+          value="Edimburgh"
           placeholder="Country, city or airport"
         />
         <BpkLabel>To: </BpkLabel>
