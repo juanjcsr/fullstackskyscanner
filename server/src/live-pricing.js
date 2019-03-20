@@ -161,7 +161,7 @@ const resultsFormatter = (results) => {
     itineraries: [],
     agents,
     places,
-    segments,
+    // segments,
     legs,
     carriers,
     stops,

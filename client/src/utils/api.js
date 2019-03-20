@@ -9,11 +9,8 @@ const getSearch = (params) => {
   url.search = urlParams;
   return fetch(url)
     .then(response => response.json())
-    .then((results) => {
-      console.log(results);
-      return results;
-    })
-    .catch(console.error);
+    .then(results => results)
+    .catch(err => err);
 };
 
 
@@ -27,7 +24,7 @@ const getSearchByPage = (params) => {
       console.log(results);
       return results;
     })
-    .catch(console.error);
+    .catch(err => err);
 };
 
 // export default ApiUtils;

@@ -12,6 +12,7 @@ import STYLES from './Itinerary.scss';
 const c = className => STYLES[className] || 'UNKNOWN';
 
 const AlignedBell = withAlignment(BpkSmallPriceAlertsIcon, lineHeightBase, iconSizeSm);
+
 const ItineraryFilter = () => (
   <div>
     <BpkGridColumn width={2} className={c('ItineraryFilter')}>

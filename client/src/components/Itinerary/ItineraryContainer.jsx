@@ -12,7 +12,11 @@ import STYLES from './Itinerary.scss';
 
 const c = className => STYLES[className] || 'UNKNOWN';
 
-
+/**
+ * ItineraryContainer holds the initial search form for the flights
+ * and the list of flights (Cards). This component handles the logic
+ * of requesting data to the server.
+ */
 class ItineraryContainer extends Component {
   constructor(props) {
     super(props);
@@ -24,10 +28,10 @@ class ItineraryContainer extends Component {
       currentPage: 0,
       pending: true,
       loading: false,
+      hasError: false,
     };
 
-    this.myRef = React.createRef();
-    // const api = new ApiUtils();
+    this.myRef = React.createRef(); // Will hold the reference to scroll to the top.
     this.getItineraries = this.getItineraries.bind(this);
     this.onSeeMoreClick = this.onSeeMoreClick.bind(this);
     this.getFligthData = this.getFligthData.bind(this);
@@ -56,8 +60,8 @@ class ItineraryContainer extends Component {
   }
 
   getItineraries(params) {
-    this.setState({ loading: true });
-    if (params.searchType === 'all') {
+    this.setState({ loading: true }); // Put the spinner to run
+    if (params.searchType === 'all') { // 'all' means unpaginated results.
       return getSearch(params).then((d) => {
         this.myRef.current.scrollIntoView({ behavior: 'smooth' });
         this.setState({
@@ -66,14 +70,21 @@ class ItineraryContainer extends Component {
           agents: d.agents,
           query: d.query,
           loading: false,
+          hasError: false,
+        });
+      }).catch(() => {
+        this.setState({
+          loading: false,
+          hasError: true,
         });
       });
     }
+    // Otherwise, search by page.
+    // It will return page 0 until server results are completely updated.
     return getSearchByPage(params).then((d) => {
       let itineraries = [...this.state.itineraries];
       if (this.state.itineraries.length === 0) {
         itineraries = [...d.itineraries];
-        // console.log(this.ref);
         this.myRef.current.scrollIntoView({ behavior: 'smooth' });
       }
       if (parseInt(d.page, 10) > parseInt(this.state.currentPage, 10)) {
@@ -88,6 +99,12 @@ class ItineraryContainer extends Component {
         loading: false,
         currentPage: d.page,
         session: d.session,
+        hasError: false,
+      });
+    }).catch(() => {
+      this.setState({
+        loading: false,
+        hasError: true,
       });
     });
   }
@@ -148,6 +165,10 @@ class ItineraryContainer extends Component {
           {
             this.state.loading &&
             <BpkSpinner />
+          }
+          {
+            this.state.hasError &&
+            <h2>API ERROR, TRY AGAIN</h2>
           }
         </BpkGridContainer>
       </div>
