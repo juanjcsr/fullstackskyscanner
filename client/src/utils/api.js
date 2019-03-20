@@ -5,7 +5,7 @@ console.log('fetching results from server...');
 
 const getSearch = (params) => {
   const urlParams = new URLSearchParams(params);
-  const url = new URL('http://localhost:4000/api/search');
+  const url = `/api/search_page&${urlParams.toString()}`;
   url.search = urlParams;
   return fetch(url)
     .then(response => response.json())
@@ -16,8 +16,8 @@ const getSearch = (params) => {
 
 const getSearchByPage = (params) => {
   const urlParams = new URLSearchParams(params);
-  const url = new URL('http://localhost:4000/api/search_page');
-  url.search = urlParams;
+  const url = `/api/search_page?${urlParams.toString()}`;
+  // url.search = urlParams;
   return fetch(url)
     .then(response => response.json())
     .then((results) => {
